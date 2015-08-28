@@ -2,4 +2,4 @@ module Test.Main where
     
 import Preface
 
-main = log "Hello, World!"
+main = sequence [ log "Hello, World!", log "Done." ]

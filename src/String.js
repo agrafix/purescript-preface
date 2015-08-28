@@ -2,8 +2,8 @@
 
 // module String
 
-exports.append = function (x) {
-  return function (y) {
-    return x + y;
-  };
+exports.append = function(x) {
+    return function(y) {
+        return x + y;
+    };
 };
