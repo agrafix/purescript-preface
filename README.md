@@ -3,6 +3,7 @@
 A simpler alternative to the Prelude.
 
 - [Module Documentation](docs/Preface.md)
+- [Example](test/Main.purs)
 
 ## Design
 
@@ -15,11 +16,3 @@ coming from Javascript. With that in mind, here are some design goals:
 
 The Preface is meant to be a _teaching tool_, such that users should plan to graduate to the regular set of PureScript core libraries once they are familiar with the ideas. However, the Preface may be a practical alternative for some very simple tasks.
 
-## Functionality
-
-Here's what is planned:
-
-- Arrays (FP in the sense of libraries like Underscore, with functions like `map`, `filter`, `reduce`, etc.)
-- Simple algebraic data types (`Maybe`, `Either`, `Tuple`) 
-- IO via something like `Eff` without instances and without row types.
-- Functions on `String`, `Boolean` and `Number` types.
