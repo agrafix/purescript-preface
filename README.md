@@ -5,6 +5,14 @@ A simpler alternative to the Prelude.
 - [Module Documentation](docs/Preface.md)
 - [Example](test/Main.purs)
 
+## Getting Started
+
+Using [Pulp](https://github.com/bodil/pulp):
+
+    pulp dep i purescript-preface
+    pulp build
+    pulp test
+
 ## Design
 
 The Preface is intended to be a simpler introduction to the concepts of PureScript for beginners, specifically those
