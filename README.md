@@ -7,9 +7,8 @@ A simpler alternative to the Prelude.
 
 ## Getting Started
 
-Using [Pulp](https://github.com/bodil/pulp):
+Clone this repository. Then, using [Pulp](https://github.com/bodil/pulp):
 
-    pulp dep i purescript-preface
     pulp build
     pulp test
 
