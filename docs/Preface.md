@@ -9,8 +9,6 @@ and is intended to be a more accessible standard library for beginners.
 data Unit
 ```
 
-A type with only one value.
-
 #### `unit`
 
 ``` purescript
@@ -26,9 +24,6 @@ data Maybe a
   = Nothing
   | Just a
 ```
-
-The `Maybe` type constructor is used to describe values which might be _missing_.
-`Maybe` is an alternative to using `null` in other languages.
 
 #### `getOrElse`
 
@@ -46,11 +41,6 @@ data Either a b
   | Right b
 ```
 
-The `Either` type constructor is used to describe values which are constructed using values
-from one of two types.
-`Either` is sometimes used to express _values or errors_, with errors on the `Left` and successful results
-on the `Right`.
-
 #### `mapLeft`
 
 ``` purescript
@@ -66,5 +56,51 @@ mapRight :: forall l a b. (a -> b) -> Either l a -> Either l b
 ```
 
 Change values constructed using `Right` by applying a function.
+
+#### `map`
+
+``` purescript
+map :: forall a b. (a -> b) -> Array a -> Array b
+```
+
+#### `filter`
+
+``` purescript
+filter :: forall a. (a -> Boolean) -> Array a -> Array a
+```
+
+Create a new `Array` by keeping those elements of another `Array` for which the specified function
+returns `true`.
+
+#### `Task`
+
+``` purescript
+data Task :: * -> *
+```
+
+#### `pure`
+
+``` purescript
+pure :: forall a. a -> Task a
+```
+
+Create a `Task` which returns a value with no side-effects.
+
+#### `bind`
+
+``` purescript
+bind :: forall a b. Task a -> (a -> Task b) -> Task b
+```
+
+Create a `Task` which combines two `Task`s, passing the result of the first to a function,
+which determines the second.
+
+#### `log`
+
+``` purescript
+log :: String -> Task Unit
+```
+
+Create a `Task` which logs a `String` to the console.
 
 
