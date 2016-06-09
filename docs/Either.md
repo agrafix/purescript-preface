@@ -19,7 +19,7 @@ on the `Right`.
 mapLeft :: forall r a b. (a -> b) -> Either a r -> Either b r
 ```
 
-Change values constructed using `Left` by applying a function. 
+Change values constructed using `Left` by applying a function.
 
 #### `mapRight`
 
@@ -28,5 +28,13 @@ mapRight :: forall l a b. (a -> b) -> Either l a -> Either l b
 ```
 
 Change values constructed using `Right` by applying a function.
+
+#### `bind`
+
+``` purescript
+bind :: forall e a b. Either e a -> (a -> Either e b) -> Either e b
+```
+
+Try one computation, and then try another which depends on its result.
 
 

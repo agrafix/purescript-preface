@@ -1,5 +1,17 @@
 ## Module Boolean
 
+#### `(&&)`
+
+``` purescript
+infixr 3 and as &&
+```
+
+#### `(||)`
+
+``` purescript
+infixr 2 or as ||
+```
+
 #### `and`
 
 ``` purescript
@@ -8,16 +20,6 @@ and :: Boolean -> Boolean -> Boolean
 
 Boolean AND.
 
-#### `(&&)`
-
-``` purescript
-(&&) :: Boolean -> Boolean -> Boolean
-```
-
-_right-associative / precedence 3_
-
-An infix operator for boolean AND.
-
 #### `or`
 
 ``` purescript
@@ -25,16 +27,6 @@ or :: Boolean -> Boolean -> Boolean
 ```
 
 Boolean OR.
-
-#### `(||)`
-
-``` purescript
-(||) :: Boolean -> Boolean -> Boolean
-```
-
-_right-associative / precedence 2_
-
-An infix operator for boolean OR.
 
 #### `not`
 

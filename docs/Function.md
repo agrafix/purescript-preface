@@ -11,12 +11,8 @@ Apply a function to an argument.
 #### `($)`
 
 ``` purescript
-($) :: forall a b. (a -> b) -> a -> b
+infixr 0 apply as $
 ```
-
-_right-associative / precedence 0_
-
-An infix operator for function application.
 
 #### `compose`
 
@@ -29,12 +25,8 @@ Compose two functions, i.e. create a function which applies one function and the
 #### `(<<<)`
 
 ``` purescript
-(<<<) :: forall a b c. (b -> c) -> (a -> b) -> a -> c
+infixr 9 compose as <<<
 ```
-
-_right-associative / precedence 9_
-
-An infix operator for function composition.
 
 #### `flip`
 

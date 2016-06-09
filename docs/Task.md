@@ -39,6 +39,14 @@ Create a `Task` which logs a `String` to the console.
 sequence :: forall a. Array (Task a) -> Task (Array a)
 ```
 
+Perform a sequence of tasks, collecting the results.
+
+#### `sequence_`
+
+``` purescript
+sequence_ :: forall a. Array (Task a) -> Task Unit
+```
+
 Perform a sequence of tasks, ignoring the results.
 
 

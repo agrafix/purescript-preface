@@ -23,12 +23,13 @@ module Preface
   , module Unit
   ) where
 
-import Array
-import Boolean
-import Either
-import Function
-import Maybe
-import Number
-import String
-import Task
-import Unit
+import Array (concat, filter, fold, map)
+import Boolean (and, not, or, (&&), (||))
+import Either (Either(..), mapLeft, mapRight)
+import Function (apply, compose, const, flip, ($), (<<<))
+import Maybe (Maybe(..), getOrElse)
+import Number (add, divide, gt, gte, lt, lte, max, min, multiply, remainder, subtract,
+               (%), (*), (+), (-), (/), (<), (<=), (>), (>=))
+import String (append, (++))
+import Task (Task, bind, log, pure, sequence, sequence_)
+import Unit (Unit, unit)

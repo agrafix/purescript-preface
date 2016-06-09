@@ -1,5 +1,8 @@
 module Either
-  ( Either(..), mapLeft, mapRight
+  ( Either(..)
+  , mapLeft
+  , mapRight
+  , bind
   ) where
 
 -- | The `Either` type constructor is used to describe values which are constructed using values
@@ -8,7 +11,7 @@ module Either
 -- | on the `Right`.
 data Either a b = Left a | Right b
 
--- | Change values constructed using `Left` by applying a function. 
+-- | Change values constructed using `Left` by applying a function.
 mapLeft :: forall r a b. (a -> b) -> Either a r -> Either b r
 mapLeft f (Left a) = Left (f a)
 mapLeft _ (Right r) = Right r
@@ -17,3 +20,8 @@ mapLeft _ (Right r) = Right r
 mapRight :: forall l a b. (a -> b) -> Either l a -> Either l b
 mapRight _ (Left l) = Left l
 mapRight f (Right a) = Right (f a)
+
+-- | Try one computation, and then try another which depends on its result.
+bind :: forall e a b. Either e a -> (a -> Either e b) -> Either e b
+bind (Left e) _ = Left e
+bind (Right a) f = f a

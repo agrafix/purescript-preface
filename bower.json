@@ -9,8 +9,8 @@
     "bower_components",
     "output"
   ],
-  "repository": {                                               
-    "type": "git",                                              
-    "url": "git://github.com/paf31/purescript-preface.git" 
-  }                                                             
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paf31/purescript-preface.git"
+  }
 }

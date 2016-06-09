@@ -1,5 +1,7 @@
 module Maybe
-  ( Maybe(..), getOrElse
+  ( Maybe(..)
+  , getOrElse
+  , bind
   ) where
 
 -- | The `Maybe` type constructor is used to describe values which might be _missing_.
@@ -10,3 +12,8 @@ data Maybe a = Nothing | Just a
 getOrElse :: forall a. a -> Maybe a -> a
 getOrElse _ (Just a) = a
 getOrElse a _ = a
+
+-- | Try one computation, and then try another which depends on its result.
+bind :: forall a b. Maybe a -> (a -> Maybe b) -> Maybe b
+bind Nothing _ = Nothing
+bind (Just a) f = f a
