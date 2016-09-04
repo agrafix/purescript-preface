@@ -40,8 +40,8 @@ foreign import max :: Number -> Number -> Number
 foreign import min :: Number -> Number -> Number
 
 infixl 4 lt as <
-infixl 4 lte as >
-infixl 4 gt as <=
+infixl 4 lte as <=
+infixl 4 gt as >
 infixl 4 gte as >=
 
 -- | Test whether one value is less than another.
